@@ -1,0 +1,339 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+html{
+    width: 100dvw;
+    overflow-x: hidden;
+    background-color: #25252b;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+}
+.menu{
+    background-color: #25252b;
+    height: 100dvh;
+    width: 20%;
+/*    padding-left: 20px;*/
+overflow-y: hidden !important;
+}
+.content{
+    /* background-color: peachpuff; */
+    background: linear-gradient(to right, purple, deeppink) !important;
+    height: 100dvh;
+    width: 80%;
+    padding-top: 10%;
+    position: relative;
+
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+/*    align-items: center;*/
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 10px;
+    height: 92%;
+}
+a img{
+    width: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.menu li a{
+    font-size: 20px;
+    text-decoration: none;
+     color: #fff;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     padding-left: 15px;
+     transition: all 0.56s ease;
+}
+.menu li {
+    background-color: navy;
+    width: 100%;
+    height: 60px;
+    margin-block: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menu h1, .menu a h1{
+    width: 100%;
+    height: 7%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    color: crimson;
+}
+.menu li a:hover{
+    background-color: lightgoldenrodyellow;
+    color: blue;
+}
+.Logout{
+    background-color: crimson;
+}
+.toggle{
+    width: 40px;
+    height: 40px;
+    background-color: crimson;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    display: none;
+    cursor: pointer;
+}
+.menu-toggle{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: crimson;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    border-radius: 10px;
+    display: none;
+}
+
+
+.greeting{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 15px;
+    border-bottom: 2px solid black;
+    box-shadow: 2px 2px 10px 5px grey;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 0;
+    font-size: 110%;
+    z-index: 1;
+    right: 0;
+    background-color: peachpuff;
+}
+#menu-t{
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    top: 0;
+    display: none;
+    width: 100px;
+    height: 50px;
+    background-color: crimson;
+    color: #fff;
+    text-transform: uppercase;
+}
+.responsible{
+   padding-top: 50px;
+/*    display: grid;*/
+/*    place-items: center;*/
+    overflow: hidden;
+    padding-inline: 20px;
+    height: 50%;
+}
+.message{
+    width: 95%;
+    margin-inline: 2%;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 200px;
+    height: max-content;
+    margin-block: 20px;
+   padding: 10px;
+}
+.message .header{
+    height: 5%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    background-color: rebeccapurple;
+    color: white;
+    text-transform: none;
+    font-size: 25px;
+}
+.message .message-body{
+    min-height: 100px;
+    background-color: lightskyblue;
+    padding: 15px;
+    height: max-content;
+}
+.message .status{
+    min-height: 60px;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-inline: 10px;
+    padding: 10px;
+}
+button:not(.submit){
+    width: 100px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+}
+scrollbar{
+    display: none;
+}
+button:not(.submit):hover{
+    background-color: crimson;
+    color: white;
+}
+
+
+.choices{
+    padding-top: 40px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 20px;
+}
+.choice{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    font-size: 30px;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    transition: all 0.55s ease;
+}
+.choice:hover{
+    background-color: coral;
+}
+
+
+
+@media only screen and (max-width:1200px){
+    
+    #menu-t{
+        display: block;
+        border-radius: none;
+    }
+    #main{
+        z-index: 100;
+    }
+    .menu{
+        
+        position: fixed;
+        width: 100dvw;
+        overflow: hidden !important;
+        transition: all 0.5s ease;
+
+    }
+    .hide{
+        display: none;
+        bottom: -100%;
+    }
+    .menu-toggle{
+        display: block;
+        display: grid;
+        place-items: center;
+    }
+    .toggle{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .content{
+        width: 100% !important;
+    }
+    /*.menu .text{
+        display: none;
+    }
+    ul li a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a img{
+        width: 30px;
+    }*/
+    .greeting{
+        font-size: 19px;
+        width: 100%;
+    }
+    button:not(.submit){
+        width: 80%;
+    }
+    .message .header{
+        font-size: 80%;
+    }
+    .visible{
+        display: block;
+        z-index: 1000;
+        bottom: 0;
+    }
+    .message button{
+        width: 50%;
+        font-size: 10px;
+    }
+  
+
+
+
+
+}
+@media only screen and (max-width:768px){
+    .choices{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .greeting{
+        font-size: 12px;
+    }
+    #time{
+        display: none;
+    }
+    .responsible{
+        margin-top: 150px;
+    }
+}
+
+
+
+

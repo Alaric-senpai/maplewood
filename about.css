@@ -1,0 +1,104 @@
+#hero1{
+    width: 100dvw;
+    height: 60dvh;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 70px;
+    background:linear-gradient(to left, coral, lightcoral) ;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+#hero1 h1{
+    font-size: 50px;
+}
+#details{
+    height: 100dvh;
+    width: 100dvw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 20px;
+    padding-top: 50px;
+    background-color: #cac9c9;
+}
+#details h1{
+    margin-block: 10px;
+    text-align: center;
+    color: darkblue;
+}
+#details p{
+    text-align: justify;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-justify: inter-word;
+    max-width: 700px;
+}
+#institute{
+    width: 100dvw;
+    padding-inline: 20px;
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+ center{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-block: 10px;
+    font-weight: 900;
+}
+.institute{
+    /* height: 500px; */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px 5px gray;
+    padding: 10px;
+    width: 450px;
+    background-color: #ddd9d9;
+    text-align: center;
+    /* padding-block: 30px; */
+    /* padding-bottom: 60px; */
+}
+.institute img{
+    height: 400px;
+    border-radius: 20px;
+    margin-block: 16px;
+    width: 90%;
+    box-shadow: 4px 3px 10px 4px grey;
+}
+.institute h2{
+    font-size: 30px;
+    margin-block: 10px;
+}
+.institute .desc{
+    background-color: #271717;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-block: 20px;
+    color: #ddd9d9;
+}
+@media only screen and (min-width: 768px){
+    #institute{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .institute{
+        width: 45vw;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #institute{
+        display: grid;
+        grid-template-columns: auto auto ;
+    }
+}

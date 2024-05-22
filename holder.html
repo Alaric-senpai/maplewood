@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias pariatur exercitationem dolores quae voluptatibus! Sed veniam aspernatur distinctio incidunt minima aliquid voluptatum voluptatem aut tenetur magni excepturi dolorum natus quia repellendus asperiores quibusdam ratione ad tempore quaerat exercitationem eos, officia voluptate suscipit. Repellendus sapiente eveniet sequi temporibus. Nisi eveniet iure rem dicta illo sapiente rerum itaque dignissimos ratione. Consequatur unde dolorem cumque vitae accusamus deserunt aspernatur rem maiores, quos commodi laborum ipsum delectus molestias quo ducimus adipisci vel cum. Animi eos harum laboriosam architecto nostrum, labore porro in. Rerum explicabo quis voluptatem a earum eveniet. Possimus iusto atque itaque enim labore ipsum natus nihil quia exercitationem iste pariatur excepturi doloremque, esse placeat omnis nostrum voluptas non obcaecati? Omnis eligendi hic quas sit recusandae iure odio, dolore autem blanditiis veniam rerum voluptate consequatur illum, impedit ex, obcaecati voluptatem libero saepe error similique sapiente repudiandae aspernatur adipisci! Facilis placeat eius nostrum quos, saepe assumenda natus vero neque molestiae. Perspiciatis architecto aliquam modi facilis at, suscipit magnam nulla officia dolore, necessitatibus, debitis ullam quae eum. Ab consectetur quo, officiis dolores in officia magni repudiandae a et dicta ad laudantium nulla suscipit commodi iure inventore aperiam aliquam totam quod necessitatibus minima hic deserunt voluptatem. Fugiat nulla exercitationem quos optio ut. Sed, quidem fugit distinctio, repudiandae necessitatibus possimus nisi doloremque molestiae aperiam cumque eos consequatur labore neque impedit! Blanditiis quaerat ducimus earum placeat nemo, deserunt quia explicabo molestiae nobis? Omnis voluptas amet doloremque quibusdam? Et quidem praesentium, ipsam itaque dolor dolorem, corrupti explicabo odit iure in nulla eveniet, aspernatur accusamus vitae labore provident possimus aliquid. Perspiciatis atque sequi ullam fugiat doloribus quia possimus reiciendis ea eum porro quidem explicabo eos numquam, officiis dolore itaque sit, voluptas unde vitae ut necessitatibus aperiam delectus? Repellendus, cupiditate? Doloremque, cum recusandae? Fuga sapiente id sequi tenetur velit quo incidunt corrupti, quam amet esse labore voluptates enim nulla fugit, autem totam sint facilis modi dignissimos illo natus iste omnis corporis at. Cupiditate neque laudantium velit dolorem aliquid dicta quam commodi explicabo consectetur quae accusantium doloribus unde minus quos perspiciatis quis odit veritatis aut suscipit pariatur, aliquam vitae in possimus? Officiis veniam illo, nam assumenda possimus ut necessitatibus deserunt quae quaerat suscipit, inventore minus. Consequuntur alias repellendus error voluptates iure assumenda adipisci nesciunt, debitis, eaque voluptatibus saepe, ex asperiores porro dolore perspiciatis blanditiis reiciendis nemo quod illo! Vero quidem soluta rerum ea eos veritatis omnis, nihil, illo quos, dolor non accusantium.
+</body>
+</html>
+
+if ($receiver == "all") {
+    # code...
+    // echo"all receiving";
+    $sql = "select * from users";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // echo"data fetched";
+        // $row = $result->fetch_assoc();
+        while ($row = $result->fetch_assoc()) {
+            // echo $row['email'] . "<br>";
+            $stmt = $conn->prepare("insert into message (email, sender, content, date) values(?, ?, ?, ?)");
+            if ($stmt) {
+                // echo "sucess here" . "<br>" . $row['email'] . "<br>";
+                $stmt->bind_param("ssss", $row['email'], $sender, $message, $date);
+                $stmt->execute();
+                $_SESSION['sucess'] = "broadcast to " . $receiver ." was sucessfull";
+                header("location:admin.php");
+            }
+            else{
+                // echo "fail here";
+                $_SESSION['sucess'] = "broadcast to" . $receiver ." was a failure";
+                header("location:admin.php");
+            }
+        }
+
+
+    }
+}

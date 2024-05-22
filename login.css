@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease;
+}
+html{
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(48, 20, 112);
+}
+#login{
+    background: linear-gradient(to left, coral , lightcoral) ;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 500px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+}
+h1{
+    font-size: 35px;
+    text-align: center;
+    color: blue;
+}
+form{
+    height: 70%;
+    width: 90%;
+}
+form a{
+    font-size: 15px;
+}
+label{
+    font-size: 25px;
+    margin-block: 5px;
+    color: black;
+}
+.input-box{
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+}
+input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px 5px grey;
+    padding-left: 10px;
+
+}
+input[type=password]{
+    width: 70%;
+    margin-right: 10px;
+}
+.holder{
+    position: relative;
+    margin-bottom: 10px;
+}
+.holder span{
+    position: absolute;
+    top: 0;
+    left: 72%;
+    background-color: blue;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.input-box a{
+    color: blue;
+    font-size: 20px;
+}
+.input-box a:hover{
+    text-decoration: underline;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: blue;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+button:hover{
+    background-color: rgb(1, 1, 148);
+}
+.fail{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}

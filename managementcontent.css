@@ -1,0 +1,22 @@
+.content{
+    background: linear-gradient(to right, purple, deeppink) !important;
+}
+.shows{
+    display: none !important;
+}
+input[type=file]{
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    background-color: #25252b;
+    &&::-webkit-file-upload-button{
+        width: 50%;
+        height: 100%;
+        color: antiquewhite;
+        background-color: #1e1e7a6e;
+        border: none;
+        margin-right: 10px;
+
+    }
+
+}
